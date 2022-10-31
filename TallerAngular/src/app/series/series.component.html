@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark bg-info">
+  <a class="navbar-brand" href="#" >
+      <img src="assets/topbar.png" width="40" height="40" class="d-inline-block align-top" alt="">
+      TV Series
+  </a>
+</nav>
+<hr>
+<div class="container">
+  <div class="row">
+      <div class="col-6">
+          <table class = "table">
+              <thead class="thead-light">
+                  <tr>
+                      <th scope="col-6">#</th>
+                      <th scope="col-6">Name</th>
+                      <th scope="col-6">Chanel</th>
+                      <th scope="col-6">Seasons</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor = "let serie of series" class = "table-secondary">
+                    <td>{{serie.id}}</td>
+                    <td><a href = {{serie.link}}>{{serie.name}}</a></td>
+                    <td>{{serie.channel}}</td>
+                    <td>{{serie.seasons}}</td>
+                  </tr>
+              </tbody>
+          </table>
+          <p> Seasons average: {{averageSeasons}}</p>
+      </div>
+  </div>
+</div>
